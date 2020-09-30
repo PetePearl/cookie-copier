@@ -1,0 +1,113 @@
+.form {
+  padding: 10px;
+
+  &__label {
+    text-align: right;
+    display: block;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(black, .4);
+
+    &:hover {
+      color: black;
+    }
+
+    svg {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__input {
+    position: relative;
+    z-index: 1;
+
+    input {
+      display: block;
+      width: 100%;
+      border: 1px solid rgba(black, .5);
+      border-radius: 4px;
+      height: 30px;
+      box-sizing: border-box;
+      line-height: 28px;
+      padding: 0 10px;
+      color: black;
+      transition: .2s;
+      outline: none;
+      background: none;
+
+      &::placeholder {
+        color: rgba(black, .3);
+      }
+
+      &:focus {
+        border-color: black;
+
+        &::placeholder {
+          color: rgba(black, .5);
+        }
+      }
+    }
+
+    &--icon {
+      input {
+        padding: 0 30px 0 10px;
+      }
+    }
+  }
+
+  &__select {
+    position: relative;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-right: 1px solid #333;
+      border-bottom: 1px solid #333;
+      transform: rotate(45deg);
+      position: absolute;
+      z-index: 1;
+      right: 10px;
+      top: 10px;
+    }
+    select {
+      position: relative;
+      z-index: 2;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      font-size: inherit;
+      font-family: inherit;
+      display: block;
+      width: 100%;
+      border: 1px solid rgba(black, .5);
+      border-radius: 4px;
+      height: 30px;
+      box-sizing: border-box;
+      line-height: 28px;
+      padding: 0 10px;
+      color: black;
+      transition: .2s;
+      outline: none;
+      background: none;
+      cursor: pointer;
+
+      &:focus {
+        border-color: black;
+      }
+
+      option:disabled {
+        color: rgba(black, .2);
+      }
+    }
+  }
+}

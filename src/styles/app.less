@@ -1,0 +1,30 @@
+@import "variables";
+
+.app {
+  width: 400px;
+  position: relative;
+  z-index: 1;
+
+  &__button {
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    width: 30px;
+
+    &--left {
+      left: 10px;
+    }
+
+    &--right {
+      right: 10px;
+    }
+  }
+
+  &__add {
+    margin: 20px 0 0;
+  }
+
+  &__body {
+    height: 91px * 3 + 20;
+  }
+}

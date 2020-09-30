@@ -1,0 +1,156 @@
+@import "variables";
+
+.pair {
+  &s {
+    font-size: 14px;
+    color: @color-blue;
+    max-height: 91px * 3 + 20;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #666;
+      width: 4px;
+    }
+  }
+
+  height: 91px;
+  position: relative;
+  z-index: 1;
+  margin: 10px 0 0;
+  transition: .2s;
+  user-select: none;
+
+  &:first-child {
+    margin: 0;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: @color-red;
+  }
+
+  &--identical:before {
+    background: @color-green;
+  }
+
+  &__point {
+    &s {
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 60px 0 0;
+    }
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 5px 0;
+    padding: 0 0 0 10px;
+    cursor: default;
+  }
+
+  &__copy {
+    position: absolute;
+    opacity: 0;
+    transition: .2s;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(black, .2);
+    background: rgba(white, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(black, .4);
+    cursor: pointer;
+    border-radius: 10px;
+
+    &:hover {
+      background: rgba(white, .9);
+      color: rgba(black, .8);
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &:hover {
+    background: #fff;
+  }
+
+  &:hover &__copy {
+    opacity: 1;
+  }
+
+  &__control {
+    &s {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    color: rgba(#000000, .3);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    margin: 0 0 1px 0;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      width: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      background: #000;
+      opacity: .1;
+    }
+
+    &:last-child {
+      margin: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &--edit:hover {
+      color: @color-green;
+    }
+
+    &--remove:hover {
+      color: @color-red;
+    }
+
+  }
+}

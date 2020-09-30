@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Cookie copier",
+  "version": "1.0",
+  "description": "Just cookie field copier",
+  "background": {
+    "scripts": [
+      "build/bundle.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "assets/icon_16.png",
+    "48": "assets/icon_48.png",
+    "128": "assets/icon_128.png"
+  },
+  "permissions": [
+    "cookies",
+    "storage",
+    "<all_urls>"
+  ]
+}

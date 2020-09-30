@@ -1,0 +1,68 @@
+@import "variables";
+
+.button {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #fff;
+  background: #fff;
+  color: rgba(black, .5);
+  transition: .2s;
+  font-weight: bold;
+
+  &--square {
+    width: 30px;
+  }
+
+  &:hover {
+    color: rgba(black, .8);
+  }
+
+  &--bordered {
+    border-color: rgba(black, .4);
+
+    &:hover {
+      border-color: rgba(black, .8);
+    }
+  }
+
+  &--green {
+    background: @color-green;
+    border-color: @color-green;
+    color: #ffffff;
+
+    &:hover {
+      background: lighten(@color-green, 2);
+      color: #ffffff;
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:disabled {
+    opacity: .6;
+    cursor: default;
+  }
+
+  &--medium {
+    height: 40px;
+  }
+
+  &--big {
+    height: 60px;
+    font-size: 20px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
