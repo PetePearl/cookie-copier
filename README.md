@@ -15,6 +15,10 @@ The list of domains to copy is taken from the open browser tabs.
 
 ---
 ## installation:
+### from chrome webstore:
+you can install extension from [official page](https://chrome.google.com/webstore/detail/cookie-copier/lhfkmfkjjeilbgfolpcndcbdgbdhbnlk)
+
+### from build:
 1. open chrome tab with extensions [chrome://extensions/](chrome://extensions/)
 2. turn on developer mode.
 3. click "load unpacked" button.
